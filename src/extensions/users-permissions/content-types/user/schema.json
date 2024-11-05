@@ -76,6 +76,18 @@
     },
     "surname": {
       "type": "string"
+    },
+    "followings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "followers"
+    },
+    "followers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "followings"
     }
   }
 }

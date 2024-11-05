@@ -6,4 +6,6 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::post.post');
+module.exports = createCoreController('api::post.post', ({ strapi }) => ({
+
+}));
